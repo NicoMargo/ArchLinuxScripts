@@ -25,3 +25,4 @@ genfstab -U /mnt >> /mnt/etc/fstab &&
 cp config.conf INSTALLERS
 cp -R INSTALLERS /mnt
 arch-chroot /mnt ./INSTALLERS/script2.sh
+arch-chroot -u ${username}:${username} /mnt /home/${username}/INSTALLERS/script3.sh

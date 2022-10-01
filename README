@@ -3,10 +3,11 @@ ARCH LINUX INSTALLATION SCRIPT BY NICOLAS MARGOSSIAN
 2) pacman -Sy git
 2) create/format partitions
 3) mount linux partition to /mnt
+4) mkdir /mnt/boot/EFI
+5) mount /dev/sdXX /mnt/boot/EFI XX represent the EFI disk/partition letter/number
 3) download (clone) scripts from github.com/NicoMargo/ArchLinuxScripts to /root
 4) change permissions to folder (chmod -R +x ArchLinuxScripts)
 5) go inside download folder (cd ArchLinuxScripts)
 6) execute first script (./script1.sh)
 9) mount efi partition (mount /dev/sdXX /boot/EFI) XX represent the partition letter and number
-10) grub-install --target=x86_64-efi --bootloader-id=Arch &&
-grub-mkconfig -o /boot/grub/grub.cfg && 
+10) 

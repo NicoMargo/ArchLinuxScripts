@@ -4,7 +4,7 @@ ln -sf /usr/share/zoneinfo/${timezone} /etc/localtime &&
 echo "${hostname}" > /etc/hostname 
 sed -i 's/#en_US.UTF-8/en_US.UTF-8/g' /etc/locale.gen
 sed -i 37c"ParallelDownloads = 5" /etc/pacman.conf &&
-sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers
+sed -i 's/# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/g' /etc/sudoers
 locale-gen
 hwclock --systohc &&
 echo "root:${rootpass}" | chpasswd
@@ -19,5 +19,5 @@ mkdir /boot/EFI &&
 sed -i 37c"ParallelDownloads = 5" /etc/pacman.conf &&
 #sed -i 's/^#[multilib]/[multilib]/' /etc/pacman.conf
 #sed -i 's/^#Include = /etc/pacman.d/mirrorlist/Include = /etc/pacman.d/mirrorlist/' /etc/pacman.conf
-exit
-arch-chroot -u ${username}:${username} /mnt ./INSTALLERS/script3.sh
+cp -R /INSTALLERS /home/${username}
+
