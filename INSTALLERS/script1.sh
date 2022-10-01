@@ -14,6 +14,11 @@ while true; do
         * ) echo "Please answer y or n.";;
     esac
 done
+umount /dev/sda3
+mkfs.ext4 /dev/sda3
+mount /dev/sda3 /mnt
+umount /dev/sda1
+mkfs.fat -F 32 /dev/sda2
 
 timedatectl set-ntp true &&
 pacman -Sy archlinux-keyring reflector --noconfirm &&

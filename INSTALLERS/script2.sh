@@ -15,6 +15,7 @@ chsh -s /bin/zsh root &&
 chsh -s /bin/zsh ${username} &&
 systemctl enable sddm NetworkManager &&
 mkdir /boot/EFI &&
+mount /dev/sda1 /boot/EFI
 #reflector -a 30 -f 7 -l 15 --sort rate --save /etc/pacman.d/mirrorlist
 sed -i 37c"ParallelDownloads = 5" /etc/pacman.conf &&
 #sed -i 's/^#[multilib]/[multilib]/' /etc/pacman.conf
