@@ -18,7 +18,10 @@ umount /dev/sda3
 mkfs.ext4 /dev/sda3
 mount /dev/sda3 /mnt
 umount /dev/sda1
-mkfs.fat -F 32 /dev/sda2
+mkfs.fat -F 32 /dev/sda1
+mkswap /dev/sda2 
+swapon /dev/sda2 
+
 
 timedatectl set-ntp true &&
 pacman -Sy archlinux-keyring reflector --noconfirm &&
@@ -31,3 +34,5 @@ cp config.conf INSTALLERS
 cp -R INSTALLERS /mnt
 arch-chroot /mnt ./INSTALLERS/script2.sh
 arch-chroot -u ${username}:${username} /mnt /home/${username}/INSTALLERS/script3.sh
+sed -i 's/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/%# wheel ALL=(ALL:ALL) NOPASSWD: ALL/g' /mnt/etc/sudoers
+sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /mnt/etc/sudoers

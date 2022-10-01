@@ -10,7 +10,6 @@ hwclock --systohc &&
 echo "root:${rootpass}" | chpasswd
 useradd -m ${username} -G wheel &&
 echo "$username:$userpass" | chpasswd &&
-git clone https://github.com/NvChad/NvChad /home/${username}/.config/nvim --depth 1 &&
 chsh -s /bin/zsh root &&
 chsh -s /bin/zsh ${username} &&
 systemctl enable sddm NetworkManager &&
