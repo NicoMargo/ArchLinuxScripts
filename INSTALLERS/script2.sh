@@ -20,4 +20,4 @@ sed -i 37c"ParallelDownloads = 5" /etc/pacman.conf &&
 sed -i 's/^#[multilib]/[multilib]/' /etc/pacman.conf
 sed -i 's/^#Include = /etc/pacman.d/mirrorlist/Include = /etc/pacman.d/mirrorlist/' /etc/pacman.conf
 exit
-arch-chroot -u ${username}:${username} /mnt ./script3.sh
+arch-chroot -u ${username}:${username} /mnt ./INSTALLERS/script3.sh
