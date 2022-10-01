@@ -1,12 +1,12 @@
 ARCH LINUX INSTALLATION SCRIPT BY NICOLAS MARGOSSIAN
 1) run livecd arch linux installation
+2) pacman -Sy git
 2) create/format partitions
 3) mount linux partition to /mnt
 3) download (clone) scripts from github.com/NicoMargo/ArchLinuxScripts to /root
 4) change permissions to folder (chmod -R +x ArchLinuxScripts)
 5) go inside download folder (cd ArchLinuxScripts)
 6) execute first script (./script1.sh)
-7) create user (useradd -m NameUser -G wheel)
-8) set zsh to new user (chsh -s /bin/zsh user &&)
 9) mount efi partition (mount /dev/sdXX /boot/EFI) XX represent the partition letter and number
-10) arch-chroot -u NewUserCreated:NewUserCreated /mnt ./script3.sh
+10) grub-install --target=x86_64-efi --bootloader-id=Arch &&
+grub-mkconfig -o /boot/grub/grub.cfg && 
