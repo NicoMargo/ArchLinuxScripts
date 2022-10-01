@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./install.conf
+source ./config.conf
 ln -sf /usr/share/zoneinfo/${timezone} /etc/localtime &&
 echo "${hostname}" > /etc/hostname 
 sed -i 's/#en_US.UTF-8/en_US.UTF-8/g' /etc/locale.gen

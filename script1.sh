@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./install.conf
+source ./config.conf
 echo "Timezone:                 $timezone"
 echo "Hostname:                 $hostname"
 echo "Root Password:            $rootpass"
