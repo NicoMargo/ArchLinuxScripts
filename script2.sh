@@ -14,7 +14,7 @@ git clone https://github.com/NvChad/NvChad /home/${username}/.config/nvim --dept
 chsh -s /bin/zsh root &&
 systemctl enable sddm NetworkManager &&
 mkdir /boot/EFI &&
-reflector -a 30 -f 7 -l 15 --sort rate --save /etc/pacman.d/mirrorlist
+#reflector -a 30 -f 7 -l 15 --sort rate --save /etc/pacman.d/mirrorlist
 sed -i 37c"ParallelDownloads = 5" /etc/pacman.conf &&
 sed -i 's/^#[multilib]/[multilib]/' /etc/pacman.conf
 sed -i 's/^#Include = /etc/pacman.d/mirrorlist/Include = /etc/pacman.d/mirrorlist/' /etc/pacman.conf
