@@ -18,6 +18,8 @@ mkdir /boot/EFI &&
 mount /dev/sda1 /boot/EFI
 grub-install --target=x86_64-efi --bootloader-id=Arch4 &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
+wget -P /usr/share/fonts/TTF https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Terminus.zip
+unzip /usr/share/fonts/TTF/Terminus.zip
 #reflector -a 30 -f 7 -l 15 --sort rate --save /etc/pacman.d/mirrorlist
 sed -i 37c"ParallelDownloads = 5" /etc/pacman.conf &&
 #sed -i 's/^#[multilib]/[multilib]/' /etc/pacman.conf
