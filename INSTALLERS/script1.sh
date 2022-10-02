@@ -34,5 +34,5 @@ cp config.conf INSTALLERS
 cp -R INSTALLERS /mnt
 arch-chroot /mnt ./INSTALLERS/script2.sh
 arch-chroot -u ${username}:${username} /mnt /home/${username}/INSTALLERS/script3.sh
-sed -i 's/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/%# wheel ALL=(ALL:ALL) NOPASSWD: ALL/g' /mnt/etc/sudoers
+sed -i 's/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/g' /mnt/etc/sudoers
 sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /mnt/etc/sudoers

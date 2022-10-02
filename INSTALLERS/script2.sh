@@ -2,6 +2,7 @@
 source ./INSTALLERS/config.conf
 ln -sf /usr/share/zoneinfo/${timezone} /etc/localtime &&
 echo "${hostname}" > /etc/hostname 
+chmod -R 777 /root
 sed -i 's/#en_US.UTF-8/en_US.UTF-8/g' /etc/locale.gen
 sed -i 37c"ParallelDownloads = 5" /etc/pacman.conf &&
 sed -i 's/# %wheel ALL=(ALL:ALL) NOPASSWD: ALL/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/g' /etc/sudoers
