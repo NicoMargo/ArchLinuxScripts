@@ -14,10 +14,11 @@ while true; do
         * ) echo "Please answer y or n.";;
     esac
 done
+umount /dev/sda1
+umount /dev/sda2
 umount /dev/sda3
 mkfs.ext4 /dev/sda3
 mount /dev/sda3 /mnt
-umount /dev/sda1
 mkfs.fat -F 32 /dev/sda1
 mkswap /dev/sda2 
 swapon /dev/sda2 
