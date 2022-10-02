@@ -28,7 +28,7 @@ timedatectl set-ntp true &&
 pacman -Sy archlinux-keyring reflector --noconfirm &&
 sed -i 37c"ParallelDownloads = 6" /etc/pacman.conf &&
 #reflector -a 30 -f 7 -l 15 --sort rate --save /etc/pacman.d/mirrorlist
-pacstrap /mnt base linux linux-firmware grub dosfstools wget vim unzip efibootmgr bspwm zsh base-devel sddm git neovim nano archlinux-wallpaper networkmanager sudo thunar thunar-volman htop neofetch intel-ucode materia-gtk-theme papirus-icon-theme sxhkd alacritty picom rofi ranger--noconfirm &&
+pacstrap /mnt base linux linux-firmware grub dosfstools wget vim unzip efibootmgr bspwm zsh base-devel sddm git neovim nano archlinux-wallpaper networkmanager sudo thunar thunar-volman htop neofetch intel-ucode materia-gtk-theme papirus-icon-theme sxhkd alacritty picom rofi ranger --noconfirm &&
 #pacstrap /mnt base linux linux-firmware grub dosfstools mtools vim os-prober efibootmgr polkit-gnome tar unrar zsh unzip base-devel neovim nano networkmanager wget thunar thunar-volman tmux thunar-archive-plugin neofetch flameshot gvfs gvfs-afc gvfs-smb git archlinux-wallpaper bspwm sxhkd rofi sddm sudo htop materia-gtk-theme alacritty xorg ranger picom intel-ucode ntfs-3g papirus-icon-theme gnome-disk-utility feh rofi linux-headers gthumb gufw fuse2 gtkmm pcsclite libcanberra ncurses firefox tumbler filezilla pulseaudio pavucontrol pulseaudio-alsa alsa-utils --noconfirm &&
 genfstab -U /mnt >> /mnt/etc/fstab &&
 cp config.conf INSTALLERS
