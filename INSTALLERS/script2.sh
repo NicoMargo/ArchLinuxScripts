@@ -14,15 +14,16 @@ echo "$username:$userpass" | chpasswd &&
 chsh -s /bin/zsh root &&
 chsh -s /bin/zsh ${username} &&
 systemctl enable sddm NetworkManager &&
+#---------------GRUB------------------
 mkdir /boot/EFI &&
 mount /dev/sda1 /boot/EFI
 grub-install --target=x86_64-efi --bootloader-id=Arch4 &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
+#---------------FONTS-----------------
 wget -P /usr/share/fonts/TTF https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Terminus.zip
-unzip /usr/share/fonts/TTF/Terminus.zip /usr/share/fonts/TTF 
-mkdir /INSTALLERS/dotfiles
-git clone https://github.com/NicoMargo/MyArchLinuxConfig /INSTALLERS/dotfiles
-mv -f /INSTALLERS/dotfiles/* /home/${username}/.config
+cd /usr/share/fonts/TTF 
+unzip Terminus.zip
+
 
 #reflector -a 30 -f 7 -l 15 --sort rate --save /etc/pacman.d/mirrorlist
 sed -i 37c"ParallelDownloads = 5" /etc/pacman.conf &&
