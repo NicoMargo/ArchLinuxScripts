@@ -8,13 +8,13 @@ cd /home/${username} &&
 #yay -S brave-bin --noconfirm 
 
 #-------------DOT FILES---------------cd
-mkdir /home/${username}/INSTALLERS/dotfiles
+mkdir INSTALLERS/dotfiles
 sleep 3
 pwd
 sleep 3
-git clone https://github.com/NicoMargo/MyArchLinuxConfig /home/${username}/INSTALLERS/dotfiles
+git clone https://github.com/NicoMargo/MyArchLinuxConfig INSTALLERS/dotfiles
 sleep 2
-mv -f /home/${username}/INSTALLERS/dotfiles/* /home/${username}/.config
+mv -f INSTALLERS/dotfiles/* .config/
 sleep 2
 git clone https://github.com/NvChad/NvChad /home/${username}/.config/nvim --depth 1 &&
 
