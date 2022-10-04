@@ -9,8 +9,13 @@ cd /home/${username} &&
 
 #-------------DOT FILES---------------cd
 mkdir /home/${username}/INSTALLERS/dotfiles
+sleep 3
+pwd
+sleep 3
 git clone https://github.com/NicoMargo/MyArchLinuxConfig /home/${username}/INSTALLERS/dotfiles
-mv -f /home/${username}/INSTALLERS/dotfiles/* /home/${username}/.config/
+sleep 2
+mv -f /home/${username}/INSTALLERS/dotfiles/* /home/${username}/.config
+sleep 2
 git clone https://github.com/NvChad/NvChad /home/${username}/.config/nvim --depth 1 &&
 
 
