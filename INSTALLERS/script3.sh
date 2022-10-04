@@ -14,7 +14,7 @@ pwd
 sleep 3
 git clone https://github.com/NicoMargo/MyArchLinuxConfig INSTALLERS/dotfiles
 sleep 2
-mv -f INSTALLERS/dotfiles/* .config/
+cp INSTALLERS/dotfiles/* .config/
 sleep 2
 git clone https://github.com/NvChad/NvChad /home/${username}/.config/nvim --depth 1 &&
 
