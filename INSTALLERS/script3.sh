@@ -13,4 +13,4 @@ mkdir INSTALLERS/dotfiles
 git clone https://github.com/NicoMargo/MyArchLinuxConfig INSTALLERS/dotfiles
 mkdir .config
 mv INSTALLERS/dotfiles/* .config/
-git clone https://github.com/NvChad/NvChad /home/${username}/.config/nvim --depth 1 &&
+git clone https://github.com/NvChad/NvChad /home/${username}/.config/nvim --depth 1
