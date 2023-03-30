@@ -17,7 +17,7 @@ systemctl enable sddm NetworkManager &&
 #---------------GRUB------------------
 mkdir /boot/EFI &&
 mount /dev/sda1 /boot/EFI
-grub-install --target=x86_64-efi --bootloader-id=Arch4 &&
+grub-install --target=x86_64-efi --bootloader-id=Arch &&
 grub-mkconfig -o /boot/grub/grub.cfg &&
 #---------------FONTS-----------------
 wget -P /usr/share/fonts/TTF https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Terminus.zip
