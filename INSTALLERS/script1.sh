@@ -28,7 +28,7 @@ timedatectl set-ntp true &&
 pacman -Sy archlinux-keyring reflector --noconfirm &&
 sed -i 37c"ParallelDownloads = 6" /etc/pacman.conf &&
 #reflector -a 30 -f 7 -l 15 --sort rate --save /etc/pacman.d/mirrorlist
-pacstrap -K /mnt base linux linux-firmware grub dosfstools mtools lxappearance iwd xarchive xf86-video-intel vim os-prober efibootmgr polkit-gnome tar unrar zsh unzip base-devel neovim nano networkmanager wget thunar thunar-volman tmux thunar-archive-plugin neofetch flameshot gvfs gvfs-afc gvfs-smb wmname git archlinux-wallpaper bspwm sxhkd rofi sddm sudo htop materia-gtk-theme alacritty xorg ranger picom intel-ucode ntfs-3g papirus-icon-theme gnome-disk-utility feh rofi linux-headers gthumb gufw fuse2 gtkmm pcsclite libcanberra ncurses firefox tumbler filezilla pulseaudio pavucontrol pulseaudio-alsa alsa-utils --noconfirm &&
+pacstrap -K /mnt base linux linux-firmware grub dosfstools mtools lxappearance iwd xarchive xf86-video-intel vim os-prober lsd efibootmgr polkit-gnome tar unrar zsh unzip base-devel neovim nano networkmanager wget thunar thunar-volman tmux thunar-archive-plugin neofetch flameshot gvfs gvfs-afc gvfs-smb wmname git archlinux-wallpaper bspwm sxhkd rofi sddm sudo htop materia-gtk-theme alacritty xorg ranger picom intel-ucode ntfs-3g papirus-icon-theme gnome-disk-utility feh rofi linux-headers gthumb gufw fuse2 gtkmm pcsclite libcanberra ncurses firefox tumbler filezilla pulseaudio pavucontrol pulseaudio-alsa alsa-utils --noconfirm &&
 genfstab -U /mnt >> /mnt/etc/fstab &&
 cp config.conf INSTALLERS
 cp -R INSTALLERS /mnt
