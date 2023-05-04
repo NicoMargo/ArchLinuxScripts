@@ -4,10 +4,6 @@ ARCH LINUX INSTALLATION SCRIPT BY NICOLAS MARGOSSIAN
 2) create/format partitions /dev/sda1 EFI --- /dev/sda2 SWAP --- /dev/sda3 Linux filesystem
 3) mount linux partition /dev/sda3 to /mnt
 4) download (clone) scripts from github.com/NicoMargo/ArchLinuxScripts to /root
-5) 
-3) 
-4) change permissions to folder (chmod -R +x ArchLinuxScripts)
-5) go inside the folder (cd ArchLinuxScripts)
-6) execute script (./start.sh)
-9) 
-10) 
+5) change permissions to folder (chmod -R +x ArchLinuxScripts)
+6) go inside the folder (cd ArchLinuxScripts)
+7) execute script (./start.sh)
