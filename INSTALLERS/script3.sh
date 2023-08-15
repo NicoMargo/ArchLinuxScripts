@@ -9,12 +9,10 @@ cd /home/${username} &&
 
 #-------------DOT FILES---------------
 cd /home/${username}
-mkdir INSTALLERS/dotfiles
-git clone https://github.com/NicoMargo/MyArchLinuxConfig INSTALLERS/dotfiles
 mkdir .config
+git clone --depth=1 https://github.com/NicoMargo/MyArchLinuxConfig .config
 git clone --depth=1 https://github.com/adi1090x/rofi.git
-cd rofi
-chmod +x setup.sh
+chmod +x rofi/setup.sh
+rofi/setup.sh
 rm -r rofi
-mv INSTALLERS/dotfiles/* .config/
 git clone https://github.com/NvChad/NvChad /home/${username}/.config/nvim --depth 1
